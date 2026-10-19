@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">好运刮刮</string>
+    <string name="load_error">票券暂时无法打开，请重试。\n你的本地积分和已保存进度会保留。</string>
+    <string name="retry">重新打开</string>
+</resources>

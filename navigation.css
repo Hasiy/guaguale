@@ -1,0 +1,99 @@
+/* Separate catalog and scratch screens; both share the same saved account and ticket. */
+:root, body { background: #eeeae2; }
+[hidden] { display: none !important; }
+body[data-page=catalog] #ticket-page,
+body[data-page=ticket] #catalog-page,
+body[data-page=ticket] > .topbar { display: none; }
+body:not([data-page=settings]) #settings-page,
+body[data-page=settings] #catalog-page,
+body[data-page=settings] #ticket-page,
+body[data-page=settings] > .topbar { display: none; }
+body[data-page=settings] { padding-bottom: 0; }
+body[data-page=settings] main, body.collection-view[data-page=settings] main, body.collection-view[data-page=settings] main.wide-ticket { display: block; max-width: 520px; padding: 0 16px; margin: 0 auto 30px; }
+.topbar-tools { display: flex; align-items: center; gap: 14px; }
+.topbar-tools > span { color: #9d9487; font-size: 10px; }
+.topbar-tools button { min-height: 44px; padding: 6px 10px; border: 0; background: none; color: #806747; font-size: 13px; }
+.settings-navigation { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 44px; margin-bottom: 22px; }
+.settings-navigation button { justify-self: start; min-height: 44px; padding: 0; border: 0; color: #806747; background: none; font-size: 12px; }
+.settings-navigation h1 { margin: 0; font-size: 15px; color: #4c4133; }
+.settings-card { padding: 26px 22px 18px; background: #faf6ee; border: 1px solid #ded4c2; border-radius: 14px; color: #4c4133; }
+.settings-eyebrow { margin: 0 0 10px; color: #a18a65; font-size: 11px; letter-spacing: 3px; }
+.settings-card h2 { font-size: 23px; margin: 0 0 12px; font-weight: 600; }
+.settings-description { font-size: 12px; color: #9a8b76; line-height: 1.8; margin-bottom: 28px; }
+.probability-field { display: flex; align-items: center; justify-content: space-between; font-size: 13px; gap: 8px; }
+.probability-field > span:last-child { display: flex; align-items: baseline; gap: 5px; color: #8e632f; font-size: 18px; }
+#probability-number { width: 100px; min-height: 48px; padding: 4px; border: 0; border-bottom: 1px solid #c6af89; background: transparent; text-align: right; font: 500 34px Georgia, serif; color: #76512e; }
+#probability-range { width: 100%; height: 44px; margin: 20px 0 0; accent-color: #927445; touch-action: pan-y; }
+.range-labels { display: flex; justify-content: space-between; color: #a08f76; font-size: 10px; }
+.probability-presets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 24px 0 20px; }
+.probability-presets button { min-height: 44px; border: 1px solid #dfd2bd; border-radius: 7px; background: #f4eddf; color: #836c4b; font-size: 13px; }
+.probability-presets button[aria-pressed=true] { border-color: #a38450; background: #eee1c6; color: #6b4b20; }
+.saved-probability { font-size: 12px; color: #827153; }
+.settings-note { border-top: 1px solid #e5dac8; padding-top: 17px; margin-top: 18px; font-size: 11px; line-height: 1.9; color: #a08f76; }
+.settings-note strong { color: #7e6b4e; font-size: 12px; font-weight: 500; }
+.settings-note p { margin: 8px 0; }
+.settings-buttons { display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; margin-top: 24px; }
+.settings-buttons button { min-height: 48px; border: 1px solid #cbbc9e; border-radius: 7px; background: none; color: #827153; font-size: 13px; }
+.settings-buttons button[type=submit] { border-color: #4b4e3c; background: #4b4e3c; color: #f7ecd5; }
+#settings-message { min-height: 20px; margin: 14px 0 0; color: #827153; font-size: 11px; line-height: 1.8; }
+body[data-page=catalog] { padding-bottom: 0; }
+body[data-page=catalog] main,
+body.collection-view[data-page=catalog] main,
+body.collection-view[data-page=catalog] main.wide-ticket {
+  display: block; max-width: 850px; padding: 0 24px; margin: 12px auto 40px;
+}
+body[data-page=catalog] .collection-sidebar { position: static; }
+body[data-page=catalog] .account-panel { margin-bottom: 28px; }
+body[data-page=catalog] .account-balance { flex-basis: auto; }
+body[data-page=catalog] .catalog-heading { display: block; margin: 0 0 20px; }
+body[data-page=catalog] .catalog-heading strong { display: block; font-size: 22px; letter-spacing: 1px; color: #43392d; }
+body[data-page=catalog] .catalog-heading span { display: block; margin-top: 8px; font-size: 12px; color: #988974; }
+body[data-page=catalog] .game-picker {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px; overflow: visible; max-height: none; padding: 0;
+}
+body[data-page=catalog] .game-picker button {
+  display: block; position: relative; min-width: 0; padding: 0 0 17px;
+  border: 1px solid #d8cebd; border-radius: 10px; background: #f9f5ed;
+  color: #4c4133; font-size: 15px; text-align: center;
+  box-shadow: 0 3px 12px #43392d08;
+}
+body[data-page=catalog] .game-picker button[aria-pressed=true] { border-color: #b19056; background: #fff9e9; }
+body[data-page=catalog] .game-picker button:disabled { opacity: .45; cursor: default; }
+body[data-page=catalog] .game-picker .mini-cover {
+  display: flex; align-items: center; justify-content: center; width: 100%; height: 160px;
+  margin: 0 0 15px; border-radius: 9px 9px 0 0; font-size: 52px;
+}
+body[data-page=catalog] .game-picker [data-game=hundred20] .mini-cover { font-size: 45px !important; }
+body[data-page=catalog] .game-picker button small { display: block; margin-top: 7px; padding: 0; color: #aa916d; font-size: 12px; font-weight: 400; }
+body[data-page=catalog] #cost-note { margin: 20px 0; font-size: 12px; text-align: center; line-height: 1.8; }
+.resume-ticket {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+  min-height: 58px; margin-bottom: 20px; padding: 14px 18px; border: 1px solid #b99a60;
+  border-radius: 9px; background: #fff6de; color: #715427; font-size: 14px;
+}
+body[data-page=ticket] main,
+body.collection-view[data-page=ticket] main {
+  display: block; max-width: 520px; margin: 0 auto 35px; padding: 0 16px;
+}
+body.collection-view[data-page=ticket] main.wide-ticket { display: block; max-width: 950px; margin: 0 auto 35px; padding: 0 16px; }
+.ticket-navigation {
+  position: sticky; top: 0; z-index: 25; display: flex; align-items: center;
+  justify-content: space-between; gap: 8px; height: 44px;
+  padding: 0 16px; margin: 0 -16px; background: #eeeae2;
+  color: #4c4133;
+}
+.ticket-navigation button { min-height: 44px; padding: 0 8px 0 0; border: 0; background: none; color: #806747; font-size: 12px; }
+.ticket-navigation strong { min-width: 0; max-width: 46%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; font-weight: 600; }
+.ticket-navigation > span { display: flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 10px; color: #9c8b73; }
+.ticket-navigation b { display: inline; margin: 0; font: 600 16px Georgia, serif; color: #754c31; }
+#ticket-page .ledger { margin-bottom: 20px; }
+@media (max-width: 600px) {
+  body[data-page=catalog] main, body.collection-view[data-page=catalog] main, body.collection-view[data-page=catalog] main.wide-ticket { padding: 0 16px; margin-top: 0; }
+  body[data-page=catalog] .game-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  body[data-page=catalog] .game-picker .mini-cover { height: 132px; }
+  body[data-page=catalog] .game-picker button { font-size: 13px; padding-bottom: 15px; }
+  body[data-page=catalog] .catalog-heading strong { font-size: 20px; }
+  body[data-page=ticket] main, body.collection-view[data-page=ticket] main, body.collection-view[data-page=ticket] main.wide-ticket { max-width: 500px; padding: 0 12px; }
+  .ticket-navigation { padding: 0 12px; margin: 0 -12px; }
+}

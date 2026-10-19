@@ -1,0 +1,100 @@
+/* Shared phone layout for mobile browsers and the offline Android WebView. */
+html { -webkit-text-size-adjust: 100%; }
+.scratch-grid { touch-action: pan-y pinch-zoom; }
+button, summary, a { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+@media (max-width: 600px) {
+  body { overflow-wrap: break-word; padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+  .topbar { padding: 18px 16px 14px; }
+  .topbar > span { font-size: 10px; letter-spacing: 0; }
+  main, .collection-view main, .collection-view main.wide-ticket {
+    display: block; width: 100%; max-width: 500px; padding: 0 12px;
+    margin: 0 auto 28px;
+  }
+  .account-panel, .collection-view .account-panel {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto;
+    padding: 16px; gap: 8px; margin: 0 0 18px;
+    background: #f9f5ed; border: 1px solid #dfd5c4; border-radius: 12px;
+  }
+  .account-panel > div:first-child strong, .collection-view .account-panel > div:first-child strong { font-size: 13px; }
+  .account-panel small, .collection-view .account-panel small { font-size: 9px; letter-spacing: 0; overflow-wrap: anywhere; }
+  .account-balance, .collection-view .account-balance { flex-direction: column; gap: 2px; align-items: flex-end; }
+  .account-balance strong, .collection-view .account-balance strong { font-size: 30px; }
+  .account-balance span, .collection-view .account-balance span { font-size: 10px; }
+  .account-panel > p, .collection-view .account-panel > p { grid-column: 1 / -1; font-size: 10px; line-height: 1.7; }
+  .catalog-heading, .collection-view .catalog-heading { margin: 0 2px 10px; }
+  .catalog-heading strong, .collection-view .catalog-heading strong { font-size: 13px; }
+  .catalog-heading span, .collection-view .catalog-heading span { display: block; font-size: 10px; }
+  .game-picker, .collection-view .game-picker {
+    display: flex; flex-direction: row; overflow-x: auto; overflow-y: hidden;
+    max-height: none; gap: 8px; padding: 0 0 9px;
+    scroll-snap-type: x proximity; scrollbar-width: thin;
+  }
+  .game-picker button, .collection-view .game-picker button {
+    display: block; flex: 0 0 96px; padding: 0 0 10px; text-align: center;
+    font-size: 11px; border-radius: 7px; scroll-snap-align: start;
+  }
+  .game-picker .mini-cover, .collection-view .game-picker .mini-cover { width: 100%; height: 64px; margin: 0 0 8px; border-radius: 6px 6px 0 0; }
+  .game-picker button small, .collection-view .game-picker button small { padding: 5px 0 0; font-size: 10px; }
+  #cost-note, .collection-view #cost-note { margin: 7px 0 16px; text-align: center; font-size: 10px; line-height: 1.7; }
+  .ticket { width: 100%; }
+  .ticket-head h1 { font-size: clamp(40px, 12vw, 60px); }
+  .prize-banner { padding: 7px 18px; gap: 5px; font-size: 11px; }
+  .prize-banner strong { font-size: 28px; }
+  .ticket-topline { padding-left: 6px; padding-right: 6px; letter-spacing: 0; }
+  .ticket-body { margin: 0 5px; padding: 8px; }
+  .lucky-strip { flex-wrap: wrap; gap: 8px; }
+  .lucky-strip h2 { font-size: 13px; }
+  .lucky-tip { display: none; }
+  .lucky-numbers { gap: 6px; }
+  .scratch-cell { min-width: 0; min-height: 56px; }
+  .scratch-cell canvas { -webkit-user-select: none; user-select: none; }
+  .duel-pair .scratch-cell { min-height: 64px; }
+  .reference-ticket .section-label h2 { font-size: 10px; letter-spacing: 1px; }
+  .reference-ticket .section-label > span { font-size: 9px; }
+  .reference-ticket .reference-section h3 { font-size: 10px; letter-spacing: 1px; padding: 9px 4px; }
+  .reference-ticket .cell-prize { font-size: clamp(8px, 2.5vw, 10px); }
+  .reference-ticket .cell-state { font-size: 8px; }
+  .reference-ticket .section-words .cell-value { font-size: 15px; }
+  .reference-ticket .section-words .cell-prize { font-size: 7px; letter-spacing: 0; }
+  .reference-ticket .scratch-cell.long-value .cell-value { font-size: clamp(9px, 2.8vw, 13px); letter-spacing: -.4px; }
+  .reference-ticket .section-numbers .scratch-cell { aspect-ratio: .9; }
+  .reference-ticket .ticket-rules { font-size: 10px; line-height: 1.8; padding: 12px; }
+  .reference-ticket .ticket-rules > strong { font-size: 11px; }
+  .reference-ticket .disclaimer { font-size: 9px; }
+  .reference-ticket .symbol-legend { font-size: 9px; letter-spacing: 0; flex-wrap: wrap; gap: 8px; }
+  .reference-ticket[data-style=hundred] #game-title { font-size: clamp(88px, 29vw, 124px); }
+  .reference-ticket[data-style=hot] #game-title { font-size: clamp(54px, 17vw, 80px); }
+  /* Reflow the landscape sheet into readable full-width game sections. */
+  .reference-ticket[data-style=newyear] .scratch-grid { display: flex; flex-direction: column; gap: 12px; }
+  .reference-ticket[data-style=newyear] .section-words .reference-cells { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .reference-ticket[data-style=newyear] .section-numbers .reference-cells { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .reference-ticket[data-style=newyear] .section-words .scratch-cell { aspect-ratio: 1; }
+  .reference-ticket[data-style=newyear] .section-numbers .scratch-cell { aspect-ratio: 1; }
+  .reference-ticket[data-style=newyear] .section-lucky .scratch-cell { aspect-ratio: 1.8; }
+  .reference-ticket[data-style=newyear] .cell-value { font-size: 21px; }
+  .reference-ticket[data-style=newyear] .cell-prize { font-size: 10px; }
+  .reference-ticket[data-style=newyear] .cell-state { font-size: 8px; }
+  .reference-ticket[data-style=newyear] .section-words .cell-value { font-size: 16px; }
+  .reference-ticket[data-style=newyear] .section-words .cell-prize { font-size: 7px; }
+  .reference-ticket[data-style=newyear] .reference-section h3 { font-size: 10px; padding: 9px 4px; }
+  .reference-ticket[data-style=newyear] .ticket-rules { font-size: 10px; }
+  .ticket-footer, .reference-ticket .ticket-footer { gap: 8px; padding: 8px; }
+  .barcode, .reference-ticket .barcode { max-width: 140px; }
+  #card-number, .reference-ticket #card-number, .reference-ticket[data-style=newyear] #card-number { font-size: 8px; letter-spacing: .5px; }
+  .verification small { font-size: 7px; }
+  .result-panel, .collection-view .result-panel { margin-top: 18px; padding: 16px; border-radius: 10px; background: #f9f5ed; border: 1px solid #dfd5c4; }
+  .result-heading h2, .collection-view .result-heading h2 { font-size: 14px; }
+  #result-message, .collection-view #result-message { font-size: 12px; line-height: 1.8; }
+  .actions {
+    position: fixed; z-index: 20; left: 50%; bottom: 0; transform: translateX(-50%);
+    width: 100%; max-width: 500px; gap: 10px; padding: 12px 16px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    background: #f9f5edf5; border-top: 1px solid #dfd5c4;
+    box-shadow: 0 -4px 20px #372f270c; backdrop-filter: blur(12px);
+  }
+  .primary-button, .secondary-button, .collection-view .primary-button, .collection-view .secondary-button { min-height: 48px; font-size: 13px; padding: 13px 12px; align-items: center; }
+  .interaction-tip, .collection-view .interaction-tip { font-size: 10px; line-height: 1.7; }
+  .ledger, .collection-view .ledger { font-size: 12px; }
+  .ledger summary { min-height: 44px; padding: 12px 0; }
+  .ledger p, .collection-view .ledger p { font-size: 10px; line-height: 1.8; }
+}

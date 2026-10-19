@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eeeae2">
+  <title>幸运加倍 · 刮刮乐试玩</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ticket-design.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body data-page="catalog">
+  <header class="topbar"><a class="brand" href="./">✦ 好运刮刮</a><div class="topbar-tools"><span>模拟刮奖 · 仅供娱乐</span><button id="open-settings" type="button">设置</button></div></header>
+  <main>
+    <div class="collection-sidebar" id="catalog-page" aria-label="选票页面">
+    <section class="account-panel" aria-label="我的账号"><div><strong>我的账号</strong><small id="account-id"></small></div><div class="account-balance"><span>可用积分</span><strong id="balance">10,000</strong></div><p id="account-notice" role="status" aria-live="polite">本地保存 · 初始赠送 10,000 积分</p></section>
+    <div class="catalog-heading"><strong>选一张，刮个好彩头</strong><span>选好票券，进入刮奖页</span></div>
+    <button id="resume-ticket" class="resume-ticket" hidden>继续刮当前票券 <span>→</span></button>
+    <nav class="game-picker" aria-label="选择玩法"></nav>
+    <p class="switch-note" id="cost-note">首次刮开扣除积分，每张只扣一次</p>
+    </div>
+    <section id="settings-page" aria-label="设置页面">
+      <nav class="settings-navigation" aria-label="设置导航"><button id="back-from-settings" type="button">‹ 返回选票</button><h1 tabindex="-1">设置</h1><span></span></nav>
+      <form id="probability-form" class="settings-card">
+        <p class="settings-eyebrow">开奖设置</p>
+        <h2>给好运，设个概率</h2>
+        <p class="settings-description">调整一整张票至少中奖一次的概率，适用于所有票种。</p>
+        <label class="probability-field" for="probability-number"><span>整张中奖概率</span><span><input id="probability-number" name="probability" type="number" min="0" max="100" step="0.1" value="10" required inputmode="decimal">%</span></label>
+        <input id="probability-range" type="range" min="0" max="100" step="0.1" value="10" aria-label="调整整张中奖概率">
+        <div class="range-labels"><span>0% · 不中奖</span><span>100% · 每张中奖</span></div>
+        <div class="probability-presets" aria-label="常用概率"><button type="button" data-probability="5">5%</button><button type="button" data-probability="10">10%</button><button type="button" data-probability="20">20%</button><button type="button" data-probability="50">50%</button></div>
+        <p id="saved-probability" class="saved-probability">当前设置：10%</p>
+        <div class="settings-note"><strong>从下一张新票开始生效</strong><p id="current-ticket-probability"></p><p>例如设置为 10%，表示长期平均约每 100 张有 10 张中奖。每张独立随机，不保证固定间隔中奖。</p></div>
+        <div class="settings-buttons"><button id="reset-probability" type="button">恢复默认</button><button type="submit">保存设置</button></div>
+        <p id="settings-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <div class="play-stage" id="ticket-page" aria-label="刮奖页面">
+    <nav class="ticket-navigation" aria-label="票面导航"><button id="back-to-catalog" type="button">‹ 返回选票</button><strong id="ticket-page-title" tabindex="-1">刮奖票面</strong><span>积分 <b id="ticket-balance">10,000</b></span></nav>
+    <section class="ticket" aria-label="幸运数字刮刮卡">
+      <div class="ticket-topline"><span>好运系列 · 第 001 期</span><span class="sample-stamp">虚拟试玩券</span></div>
+      <div class="reference-brand"><span><b>好运票社</b><small>LUCKY SCRATCH · 模拟体验</small></span><strong id="face-value"></strong></div>
+      <div class="ticket-head">
+        <div class="head-decoration" aria-hidden="true">✦</div>
+        <p class="edition">LUCKY NUMBERS · DOUBLE YOUR LUCK</p>
+        <img class="hero-art" src="assets/shun-gold-v2.png" alt="" aria-hidden="true">
+        <p class="collection-kicker">好运典藏 · 东方祈愿系列</p>
+        <h1 id="game-title">幸运<span>加倍</span></h1>
+        <span id="ticket-seal" class="ticket-seal"></span>
+        <div class="prize-banner"><span id="prize-label">单格最高</span> <strong id="max-prize">1,000</strong> 积分</div>
+        <p class="ticket-tagline">24 次揭晓机会 · 数字对上就有奖</p>
+      </div>
+      <div class="ticket-body">
+        <div class="lucky-strip"><h2>幸运<br>号码</h2><div id="lucky-numbers" class="lucky-numbers" aria-label="本期幸运数字"></div><span class="lucky-tip">对中任一号码<br>即得对应积分</span></div>
+        <div class="section-label"><h2 id="grid-title">你的号码</h2><span id="progress">已刮开 0 / 24</span></div>
+        <div id="scratch-grid" class="scratch-grid"></div>
+        <div class="symbol-legend"><span><b>★</b> 直接中奖</span><span><b>×2</b> 对应积分翻倍</span></div>
+      </div>
+      <div class="print-footer"><strong>保安区请勿刮开</strong><span>最高积分 <b id="footer-prize"></b><small>中奖积分兼中兼得</small></span></div>
+      <div class="ticket-rules"><strong>游戏规则</strong><p id="game-rules">「你的号码」与任一「幸运号码」相同，即获得该格标示积分；刮出 ★ 直接获得该格积分；刮出 ×2 获得该格积分的 2 倍。中奖积分可累加。</p><p class="disclaimer">本券为网页模拟体验，无现金价值，不可购买或兑奖。</p></div>
+      <div class="ticket-footer"><div class="serial-block"><span class="barcode" aria-hidden="true"></span><span id="card-number">NO. ----------------</span></div><div class="verification"><span aria-hidden="true">▦</span><small>试玩标识<br>非兑奖凭证</small></div></div>
+      <aside class="ticket-back"><h2>好运票社</h2><p>虚拟积分 · 趣味人生</p><hr><h3>积分说明</h3><p>本券为独立创作的网页模拟票券，仅供娱乐体验，不属于官方彩票，不可兑付现金。</p><h3>奖励级距</h3><table><tbody><tr><td>特别奖</td><td>1,000,000 分</td></tr><tr><td>一等奖</td><td>10,000 分</td></tr><tr><td>二等奖</td><td>1,000 分</td></tr><tr><td>三等奖</td><td>500 分</td></tr><tr><td>四等奖</td><td>200 分</td></tr><tr><td>五等奖</td><td>100 分</td></tr><tr><td>体验奖</td><td>50 分</td></tr></tbody></table><p>首次刮开扣除票面积分；中奖自动记入本地试玩账号。</p><div class="barcode" aria-hidden="true"></div><p>模拟印制批次 · 2026</p></aside>
+    </section>
+    <section class="result-panel" aria-label="试玩结果">
+      <div class="result-heading"><h2 id="result-title">好运，等待揭晓</h2><div class="score"><span id="total">—</span><span class="score-unit">积分</span></div></div>
+      <p id="result-message" role="status" aria-live="polite">刮开全部 24 格，看看今天收获多少惊喜。</p>
+      <div class="actions"><button id="reveal-all" class="primary-button">一键刮开 <span aria-hidden="true">↗</span></button><button id="new-card" class="secondary-button">换一张试试 <span aria-hidden="true">↻</span></button></div>
+      <p class="interaction-tip">按住鼠标或用手指刮开 · 也可聚焦格子后按回车揭晓</p>
+    </section>
+    <details class="ledger"><summary>最近积分记录</summary><ul id="ledger-list"></ul><p>数据仅存于当前浏览器、当前站点；清除网站数据后会丢失。尚未接入登录与云端账号。</p></details>
+    </div>
+  </main>
+  <script src="reference-tickets.js"></script>
+  <script src="game.js"></script>
+  <script src="wallet.js"></script>
+  <script src="scratch-gesture.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

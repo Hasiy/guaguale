@@ -1,0 +1,2 @@
+pc_memory_init: above 4g size: 40000000
+D:\Android_SDK\Sdk\emulator\qemu\windows-x86_64\qemu-system-x86_64-headless.exe: virtio: zero sized buffers are not allowed

@@ -1,0 +1,140 @@
+--------- beginning of main
+10-17 11:50:19.244  2401  2401 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10229
+10-17 11:50:19.259  2401  2401 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10229/pid_2401
+10-17 11:50:19.413  2401  2401 I Zygote  : Process 2401 created for com.haoyun.scratch
+10-17 11:50:19.413  2401  2401 I .haoyun.scratch: Late-enabling -Xcheck:jni
+10-17 11:50:19.460  2401  2401 I .haoyun.scratch: Using generational CollectorTypeCMC GC.
+10-17 11:50:19.461  2401  2401 W .haoyun.scratch: Unexpected CPU variant for x86: x86_64.
+10-17 11:50:19.461  2401  2401 W .haoyun.scratch: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+10-17 11:50:19.692  2401  2401 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-17 11:50:20.724  2401  2401 D nativeloader: Configuring clns-9 for other apk /data/app/~~FcvOv4JTqHCGn4DsR5kRXg==/com.haoyun.scratch-MJGSZ_P7J3lAVZ0jdERDqg==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~FcvOv4JTqHCGn4DsR5kRXg==/com.haoyun.scratch-MJGSZ_P7J3lAVZ0jdERDqg==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.haoyun.scratch
+10-17 11:50:20.736  2401  2401 D CompatChangeReporter: Compat change id reported: 202956589; UID 10229; state: ENABLED
+--------- beginning of system
+10-17 11:50:20.835  2401  2401 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.haoyun.scratch/cache
+10-17 11:50:20.903  2401  2401 V GraphicsEnvironment: Currently set values for:
+10-17 11:50:20.903  2401  2401 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-17 11:50:20.903  2401  2401 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-17 11:50:20.904  2401  2401 V GraphicsEnvironment: com.haoyun.scratch is not listed in per-application setting
+10-17 11:50:20.904  2401  2401 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+10-17 11:50:20.942  2401  2401 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-17 11:50:21.520  2401  2401 W .haoyun.scratch: Verification of void androidx.profileinstaller.ProfileInstallerInitializer.writeInBackground(android.content.Context) took 108.288ms (230.87 bytecodes/s) (0B arena alloc)
+10-17 11:50:21.710  2401  2401 W .haoyun.scratch: Verification of androidx.profileinstaller.ProfileInstallerInitializer$Result androidx.profileinstaller.ProfileInstallerInitializer.create(android.content.Context) took 189.998ms (178.95 bytecodes/s) (0B arena alloc)
+10-17 11:50:29.274  2401  2401 I Choreographer: Skipped 422 frames!  The application may be doing too much work on its main thread.
+10-17 11:50:29.284  2401  2401 V ActivityThread: getPackageInfo() caused update to cached ApplicationInfo for package com.haoyun.scratch
+10-17 11:50:29.391  2401  2493 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-17 11:50:29.890  2401  2401 W .haoyun.scratch: Verification of void androidx.lifecycle.LifecycleRegistry.forwardPass(androidx.lifecycle.LifecycleOwner) took 126.585ms (979.58 bytecodes/s) (0B arena alloc)
+10-17 11:50:30.095  2401  2493 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+10-17 11:50:30.095  2401  2493 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+10-17 11:50:30.096  2401  2493 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:30.226  2401  2493 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-17 11:50:31.596  2401  2401 D CompatChangeReporter: Compat change id reported: 309578419; UID 10229; state: ENABLED
+10-17 11:50:37.132  2401  2401 I WebViewFactory: Loading com.google.android.webview version 149.0.7827.5 (code 782700509)
+10-17 11:50:37.329  2401  2401 V ResourcesManager: The following library key has been added: ResourcesKey{ mHash=54e1313e mResDir=null mSplitDirs=[] mOverlayDirs=[/data/resource-cache/com.android.systemui-neutral-G70H.frro,/data/resource-cache/com.android.systemui-accent-7gqz.frro,/data/resource-cache/com.android.systemui-dynamic-vzJ2.frro] mLibDirs=[/data/app/~~JYIN8Shzvll-bsYWsSvR6A==/com.google.android.webview-BQAJLIfEOTdgZfMQDPZOBQ==/WebViewGoogle.apk,/system/framework/android.test.base.jar,/system_ext/framework/androidx.window.extensions.jar] mDisplayId=0 mOverrideConfig=v37 mCompatInfo={480dpi always-compat} mLoaders=[]}
+10-17 11:50:38.312  2401  2401 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-17 11:50:38.312  2401  2401 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-17 11:50:38.317  2401  2401 D nativeloader: Configuring clns-10 for other apk /data/app/~~JYIN8Shzvll-bsYWsSvR6A==/com.google.android.webview-BQAJLIfEOTdgZfMQDPZOBQ==/WebViewGoogle.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~JYIN8Shzvll-bsYWsSvR6A==/com.google.android.webview-BQAJLIfEOTdgZfMQDPZOBQ==/lib/x86_64:/data/app/~~JYIN8Shzvll-bsYWsSvR6A==/com.google.android.webview-BQAJLIfEOTdgZfMQDPZOBQ==/WebViewGoogle.apk!/lib/x86_64, permitted_path=/data:/mnt/expand
+10-17 11:50:38.812  2401  2401 I cr_WVCFactoryProvider: version=149.0.7827.5 (782700509) minSdkVersion=29 multiprocess=true packageId=2 splits=<none>
+10-17 11:50:38.866  2401  2401 D nativeloader: Load /data/app/~~JYIN8Shzvll-bsYWsSvR6A==/com.google.android.webview-BQAJLIfEOTdgZfMQDPZOBQ==/WebViewGoogle.apk!/lib/x86_64/libwebviewchromium.so using class loader ns clns-10 (caller=/data/app/~~JYIN8Shzvll-bsYWsSvR6A==/com.google.android.webview-BQAJLIfEOTdgZfMQDPZOBQ==/WebViewGoogle.apk): ok
+10-17 11:50:39.003  2401  2401 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-10 (caller=/data/app/~~JYIN8Shzvll-bsYWsSvR6A==/com.google.android.webview-BQAJLIfEOTdgZfMQDPZOBQ==/WebViewGoogle.apk): ok
+10-17 11:50:39.201  2401  2603 I chromium: [1017/115039.169764:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+10-17 11:50:39.201  2401  2603 I chromium: [1017/115039.201514:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+10-17 11:50:39.415  2401  2401 I cr_LibraryLoader: Successfully loaded native library
+10-17 11:50:39.453  2401  2593 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.haoyun.scratch/shared_prefs/WebViewChromiumPrefs.xml: [<1: 0, <2: 0, <4: 0, <8: 0, <16: 0, <32: 0, <64: 1, <128: 0, <256: 0, <512: 1, <1024: 0, <2048: 0, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+10-17 11:50:39.471  2401  2401 I cr_CachingUmaRecorder: Flushed 47 samples from 22 histograms, 0 samples were dropped.
+10-17 11:50:39.557  2401  2401 I cr_ChildProcLH: ScopedServiceBindingBatch.tryActivate: false
+10-17 11:50:39.559  2401  2401 I cr_CombinedPProvider: #registerProvider() provider:WV.wk@f46d5c4 isPolicyCacheEnabled:false policyProvidersSize:0
+10-17 11:50:39.560  2401  2401 I cr_PolicyProvider: #setManagerAndSource() 0
+10-17 11:50:39.619  2401  2401 I cr_DisplayManager: Is Display Topology available: false
+10-17 11:50:41.352  2401  2601 I cr_policy: registerReceiver succeeded after 1773ms
+10-17 11:50:42.834  2401  2401 I cr_CombinedPProvider: #linkNativeInternal() 1
+10-17 11:50:42.932  2401  2401 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+10-17 11:50:42.934  2401  2401 I cr_PolicyProvider: #notifySettingsAvailable() 0
+10-17 11:50:42.934  2401  2401 I cr_CombinedPProvider: #onSettingsAvailable() 0
+10-17 11:50:42.934  2401  2401 I cr_CombinedPProvider: #flushPolicies()
+10-17 11:50:44.180  2401  2683 D CompatChangeReporter: Compat change id reported: 312399441; UID 10229; state: ENABLED
+10-17 11:50:44.229  2401  2674 W chromium: [WARNING:net/dns/dns_config_service_android.cc:69] Failed to read DnsConfig.
+10-17 11:50:44.632  2401  2401 W chromium: [WARNING:android_webview/browser/network_service/net_helpers.cc:137] HTTP Cache size is: 20971520
+10-17 11:50:51.341  2401  2681 W cr_media: BLUETOOTH_CONNECT permission is missing.
+10-17 11:50:51.348  2401  2681 W cr_media: getBluetoothAdapter() requires BLUETOOTH permission
+10-17 11:50:51.348  2401  2681 W cr_media: registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+10-17 11:50:51.870  2401  2681 D AudioSystem: onNewService: media.audio_policy service obtained 0x7d51d8c449c0
+10-17 11:50:51.899  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:51.899  2401  2796 W libc    : Access denied finding property "vendor.mesa.log"
+10-17 11:50:51.900  2401  2796 W libc    : Access denied finding property "vendor.mesa.log.level"
+10-17 11:50:51.900  2401  2796 W libc    : Access denied finding property "vendor.mesa.log.prefix"
+10-17 11:50:51.900  2401  2796 W libc    : Access denied finding property "vendor.mesa.gallium.print.options"
+10-17 11:50:51.900  2401  2796 W libc    : Access denied finding property "vendor.mesa.log.file.auto"
+10-17 11:50:51.900  2401  2796 W libc    : Access denied finding property "vendor.mesa.log.file"
+10-17 11:50:51.901  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:51.901  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:51.901  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:51.901  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:51.956  2401  2681 D AudioSystem: getService: IAudioPolicyService retrieved: 0x7d51d8c449c0  cached: 0x7d51d8c449c0
+10-17 11:50:51.985  2401  2401 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-17 11:50:51.985  2401  2401 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-17 11:50:52.085  2401  2401 D CompatChangeReporter: Compat change id reported: 349153669; UID 10229; state: ENABLED
+10-17 11:50:52.160  2401  2401 W HWUI    : Unknown dataspace 0
+10-17 11:50:52.296  2401  2837 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.171  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.171  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.311  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.311  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.311  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.311  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.314  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.314  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.314  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.315  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.317  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.317  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.317  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.317  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.319  2401  2796 W libc    : Access denied finding property "vendor.mesa.vk.trace"
+10-17 11:50:53.319  2401  2796 W libc    : Access denied finding property "vendor.mesa.vk.trace.per.submit"
+10-17 11:50:53.320  2401  2796 W libc    : Access denied finding property "vendor.mesa.vk.trace.frame"
+10-17 11:50:53.320  2401  2796 W libc    : Access denied finding property "vendor.mesa.vk.trace.trigger"
+10-17 11:50:53.527  2401  2401 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+10-17 11:50:53.527  2401  2401 I cr_PolicyProvider: #notifySettingsAvailable() 0
+10-17 11:50:53.527  2401  2401 I cr_CombinedPProvider: #onSettingsAvailable() 0
+10-17 11:50:53.527  2401  2401 I cr_CombinedPProvider: #flushPolicies()
+10-17 11:50:53.690  2401  2796 W libc    : Access denied finding property "vendor.mesa.vk.wsi.debug"
+10-17 11:50:53.694  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.695  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.698  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.698  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.701  2401  2796 W libc    : Access denied finding property "vendor.mesa.vk.wsi.present.mode"
+10-17 11:50:53.704  2401  2796 W libc    : Access denied finding property "vendor.mesa.vk.wsi.headless.swapchain"
+10-17 11:50:53.704  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.704  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.706  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.706  2401  2796 E MESA    : Failed to open rendernode: No such file or directory
+10-17 11:50:53.708  2401  2796 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-17 11:50:53.782  2401  2850 I CameraManagerGlobal: Connecting to camera service
+10-17 11:50:53.788  2401  2401 D ViewRootImpl: Skipping stats log for color mode
+10-17 11:50:54.658  2401  2407 W .haoyun.scratch: Suspending all threads took: 750.849ms
+10-17 11:50:55.276  2401  2414 W libbinder.Binder: Binder transaction to android.app.IServiceConnection, function: UNKNOWN_FUNCTION_NAME, code: 1, took 1134ms. Data bytes: 296 Reply bytes: 0 Flags: 17
+10-17 11:50:55.278  2401  2407 I .haoyun.scratch: Background concurrent mark compact GC freed 2356KB AllocSpace bytes, 13(576KB) LOS objects, 49% free, 3237KB/6474KB, paused 841.694ms,482.469ms total 1.984s
+10-17 11:50:55.281  2401  2419 W libbinder.Binder: Binder transaction to android.view.accessibility.IAccessibilityManagerClient, function: UNKNOWN_FUNCTION_NAME, code: 4, took 1121ms. Data bytes: 136 Reply bytes: 0 Flags: 17
+10-17 11:50:55.309  2401  2413 W libbinder.Binder: Binder transaction to android.hardware.ICameraServiceListener, function: UNKNOWN_FUNCTION_NAME, code: 3, took 1453ms. Data bytes: 112 Reply bytes: 0 Flags: 17
+10-17 11:50:55.812  2401  2401 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-17 11:50:55.812  2401  2401 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-17 11:50:56.743  2401  2894 D ProfileInstaller: Installing profile for com.haoyun.scratch
+10-17 11:50:57.055  2401  2401 I Choreographer: Skipped 340 frames!  The application may be doing too much work on its main thread.
+10-17 11:50:57.057  2401  2675 E cr_AwSupervisedUserDel: Unable to determine if restricted content blocking is required. Exception: java.util.concurrent.TimeoutException
+10-17 11:50:57.101  2401  2401 D VRI[MainActivity]: WindowInsets changed: 1344x2992 statusBars:[0,159,0,0] navigationBars:[0,0,0,72] mandatorySystemGestures:[0,195,0,96] 
+10-17 11:50:57.130  2401  2401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@962f2fd
+10-17 11:50:57.139  2401  2908 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@962f2fd
+10-17 11:50:58.220  2401  2401 I Surface : Creating surface for consumer unnamed-2401-0 with slotExpansion=1 for 64 slots
+10-17 11:50:58.442  2401  2401 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+10-17 11:50:59.536  2401  2859 I HWUI    : Davey! duration=8027ms; Flags=1, FrameTimelineVsyncId=17267, IntendedVsync=384288204750, Vsync=389954870850, InputEventId=0, HandleInputStart=389958518100, AnimationStart=389958567000, PerformTraversalsStart=389959463200, DrawStart=392052097700, FrameDeadline=384304871416, FrameStartTime=389955802000, FrameInterval=16666665, WorkloadTarget=16666666, AnimationTime=389954870850, AnimationCounter=-1, SyncQueued=392058568400, SyncStart=392079913300, IssueDrawCommandsStart=392080064900, SwapBuffers=392170109100, FrameCompleted=392337180300, DequeueBufferDuration=135400, QueueBufferDuration=1990300, GpuCompleted=392337180300, SwapBuffersCompleted=392310788900, DisplayPresentTime=0, CommandSubmissionCompleted=392170109100, 
+10-17 11:50:59.686  2401  2401 I Choreographer: Skipped 156 frames!  The application may be doing too much work on its main thread.
+10-17 11:50:59.714  2401  2401 I .haoyun.scratch: hiddenapi: Accessing hidden field Landroid/graphics/Bitmap;->mNativePtr:J (runtime_flags=0, domain=platform, api=unsupported) from Lcom/android/webview/chromium/WebViewChromium; (domain=app, TargetSdkVersion=35) using JNI: allowed
+10-17 11:50:59.761  2401  2413 I HWUI    : Davey! duration=2640ms; Flags=0, FrameTimelineVsyncId=17639, IntendedVsync=389971543410, Vsync=392571543306, InputEventId=0, HandleInputStart=392587775300, AnimationStart=392588428500, PerformTraversalsStart=392589345400, DrawStart=392590435200, FrameDeadline=392354870611, FrameStartTime=392587028900, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=392571543306, AnimationCounter=-1, SyncQueued=392593028600, SyncStart=392593161200, IssueDrawCommandsStart=392593261800, SwapBuffers=392595120600, FrameCompleted=392612262500, DequeueBufferDuration=57000, QueueBufferDuration=380700, GpuCompleted=392611929700, SwapBuffersCompleted=392612262500, DisplayPresentTime=0, CommandSubmissionCompleted=392595120600, 
+10-17 11:51:07.029  2401  2414 I HWUI    : Davey! duration=3872ms; Flags=0, FrameTimelineVsyncId=18373, IntendedVsync=396021532068, Vsync=396038198734, InputEventId=0, HandleInputStart=396039031600, AnimationStart=396039062500, PerformTraversalsStart=396190593100, DrawStart=396190841900, FrameDeadline=396038198734, FrameStartTime=396039002100, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=396038198734, AnimationCounter=-1, SyncQueued=396191353800, SyncStart=396191435200, IssueDrawCommandsStart=396191514300, SwapBuffers=399794490600, FrameCompleted=399894111200, DequeueBufferDuration=20900, QueueBufferDuration=457700, GpuCompleted=399894111200, SwapBuffersCompleted=399873608100, DisplayPresentTime=0, CommandSubmissionCompleted=399794490600, 
+10-17 11:51:07.040  2401  2401 I Choreographer: Skipped 166 frames!  The application may be doing too much work on its main thread.
+10-17 11:51:08.929  2401  2413 I HWUI    : Davey! duration=1960ms; Flags=0, FrameTimelineVsyncId=18471, IntendedVsync=397088198692, Vsync=397088198692, InputEventId=0, HandleInputStart=397099846500, AnimationStart=397099891900, PerformTraversalsStart=397157693400, DrawStart=397158242800, FrameDeadline=399921531912, FrameStartTime=397099820900, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=397088198692, AnimationCounter=-1, SyncQueued=397158678700, SyncStart=399873702700, IssueDrawCommandsStart=399873768000, SwapBuffers=401731670000, FrameCompleted=401763412800, DequeueBufferDuration=3714300, QueueBufferDuration=843500, GpuCompleted=401763412800, SwapBuffersCompleted=401748079600, DisplayPresentTime=0, CommandSubmissionCompleted=401731670000, 
+10-17 11:51:08.971  2401  2401 I Choreographer: Skipped 95 frames!  The application may be doing too much work on its main thread.
+10-17 11:51:10.635  2401  2413 I HWUI    : Davey! duration=4851ms; Flags=0, FrameTimelineVsyncId=18479, IntendedVsync=397171538075, Vsync=399938204465, InputEventId=0, HandleInputStart=400278176500, AnimationStart=400278209500, PerformTraversalsStart=400280126500, DrawStart=400280396200, FrameDeadline=401788198504, FrameStartTime=399941018100, FrameInterval=16666665, WorkloadTarget=16666666, AnimationTime=399938204465, AnimationCounter=-1, SyncQueued=400280774300, SyncStart=401748232300, IssueDrawCommandsStart=401748419400, SwapBuffers=403446175100, FrameCompleted=403490308600, DequeueBufferDuration=32300, QueueBufferDuration=270700, GpuCompleted=403490308600, SwapBuffersCompleted=403473936600, DisplayPresentTime=0, CommandSubmissionCompleted=403446175100, 
+10-17 11:51:11.872  2401  2413 I HWUI    : Davey! duration=918ms; Flags=0, FrameTimelineVsyncId=18856, IntendedVsync=403838198422, Vsync=403838198422, InputEventId=0, HandleInputStart=403842588200, AnimationStart=403842637100, PerformTraversalsStart=403847949800, DrawStart=403848210200, FrameDeadline=403854865088, FrameStartTime=403842562200, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=403838198422, AnimationCounter=-1, SyncQueued=403849362400, SyncStart=403849657800, IssueDrawCommandsStart=403849752200, SwapBuffers=404748188100, FrameCompleted=404757202100, DequeueBufferDuration=34400, QueueBufferDuration=303900, GpuCompleted=404757202100, SwapBuffersCompleted=404753126200, DisplayPresentTime=0, CommandSubmissionCompleted=404748188100, 
+10-17 11:51:11.878  2401  2401 I Choreographer: Skipped 54 frames!  The application may be doing too much work on its main thread.
+10-17 11:51:14.272  2401  2406 I .haoyun.scratch: Compiler allocated 5559KB to compile void android.view.ViewRootImpl.performTraversals(long)
